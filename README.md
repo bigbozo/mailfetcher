@@ -3,7 +3,7 @@ Docker image based on centos, fetchmail & procmail for fetching external mail ac
 raw mails in provided volume
 
 ##Usage
-Create data/ dir and provide data/.bashrc with following lines
+Create /data-dir and provide data/.bashrc with following lines
 
 	export IMAPUSER=<Imap-User>
 	export IMAPPASS=<Imap-Password>
