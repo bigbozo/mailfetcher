@@ -1,13 +1,17 @@
-#Wanderlust
-A Nginx-Webserver-driven Website providing automatic display of collected GPX-Tracks and Photos. 
-
-This is just an initial commit as entry-point for collaboration.
-
-Nearly everthing needs to be done.
+#Mailfetcher
+Docker image based on centos, fetchmail & procmail for fetching external mail accounts and saving
+raw mails in provided volume
 
 ##Usage
+Create data/ dir and provide .bashrc with following lines
+
+	export IMAPUSER=<Imap-User>
+	export IMAPPASS=<Imap-Password>
+	export IMAPHOST=<imap-host>
+
 Invoke
 
-	docker run -d -p 80:80  bigbozo/wanderlustblog:v0.1.1
+	docker run -ti -v $(pwd)/data:/data bigbozo/mailfetcher
+
 	
 Website will be served from http://\<dockerhost\>/	
